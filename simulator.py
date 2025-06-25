@@ -26,6 +26,7 @@ class Core:
         self.current_task = task
         self.time_remaining = task.remaining_time
         task.start_time = current_time
+        task.core_id = self.core_id
 
     def step(self, current_time):
         if self.current_task:
