@@ -9,6 +9,7 @@ class NeuralSchedulerPolicy:
         assignments = []
         for task in tasks:
             x = self.encode_input(task, cores, current_time)
+            x = x.unsqueeze(0)  # Ensure 2D input for BatchNorm1d
             core_index = self.model(x).argmax().item()
             if cores[core_index].current_task is None:
                 assignments.append((task, cores[core_index]))

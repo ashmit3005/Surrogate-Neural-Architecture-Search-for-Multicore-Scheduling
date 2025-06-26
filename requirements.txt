@@ -1,5 +1,12 @@
-scikit-learn 
+streamlit
+torch
+matplotlib
+pandas
+plotly
+scikit-learn
 numpy
 torch
 streamlit
 matplotlib
+scipy
+joblib
